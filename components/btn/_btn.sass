@@ -1,0 +1,23 @@
+.btn
+  display: inline-block
+  float: none
+
+  &__text
+    font-size: 36px
+    padding: 8px 50px
+    border: 3px ridge white
+    &.-black
+      border: 3px ridge black
+      padding: 5px 30px
+    +LAPTOP_MAX
+      font-size: 30px
+    +TAB_ONLY_880
+      font-size: 22px
+      padding: 8px 30px
+    +PHONE_ONLY_600
+      font-size: 18px
+      padding: 6px 25px
+      margin-top: 5px
+    +PHONE_ONLY_480
+      font-size: 14px
+      padding: 0 25px

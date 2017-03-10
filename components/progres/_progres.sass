@@ -1,0 +1,44 @@
+.progres
+  background-image: url("../components/progres/src/background.jpg")
+  +bg-img
+  padding: 50px 0
+  +clearfix
+
+  &__black
+    +clearfix
+    background: $black
+    text-align: center
+    color: white
+
+  &__logo
+    display: inline-block
+    width: 200px
+    padding-top: 25px
+
+  &__title
+    font-size: 24px
+
+  &__bar
+    display: flex
+    justify-content: space-between
+
+  &__box
+    float: left
+    text-align: center
+    +clearfix
+    margin: 0 0 20px 0
+
+  &__square
+    background: $blue
+    width: 130px
+    display: inline-block
+    padding: 40px 0
+    margin: 10px 0
+    +clearfix
+
+  &__number
+    font-size: 36px
+
+  &__char
+    font-size: 48px
+    padding: 40px 30px

@@ -1,0 +1,99 @@
+.menu
+  +clearfix
+  z-index: 100
+  background: black
+  color: white
+  width: 100%
+  position: relative
+  +PHONE_ONLY
+    height: 80px
+
+  &__nav
+    +PHONE_ONLY
+      padding-top: 70px
+      display: none
+      position: absolute
+      background: black
+      font-size: 16px
+      width: 100%
+      z-index: 0
+      top: 0
+      left: 0
+
+  &__navLeft
+    display: flex
+    justify-content: center
+    padding: 30px 0
+    +TAB_MAX
+      padding: 35px 0 30px 0
+    +PHONE_ONLY
+      float: none
+      +clearfix
+      display: block
+
+  &__box
+    width: 150px
+    height: 20px
+    +TAB_MAX
+      width: 130px
+
+  &__navItem
+    float: left
+    +flex
+    font-size: 16px
+    padding: 0 20px
+    font-weight: 700
+    border-right: 2px solid white
+    &:last-child
+      border: none
+    +LAPTOP_MAX
+      font-size: 14px
+      padding: 0 10px
+    +TAB_MAX
+      font-size: 13px
+    +TAB_ONLY_880
+      font-size: 11px
+      +clearfix
+    +PHONE_ONLY
+      width: 100%
+      text-align: center
+      display: inline-block
+      font-size: 16px
+      padding: 10px 0
+
+  &__logo
+    position: absolute
+    top: 0
+    background: black
+    padding: 10px
+    width: 150px
+    height: 150px
+    border-radius: 56%
+    display: block
+    float: left
+    z-index: 2
+    +flex
+    +LAPTOP_MAX
+      width: 130px
+    +TAB_MAX
+      width: 130px
+      height: 130px
+
+
+  &__lang
+    display: inline-block
+    text-align: center
+    +PHONE_ONLY
+      float: right
+      margin: 0 30px 10px
+
+  &__bars
+    position: absolute
+    top: 10px
+    right: 0
+    color: white
+    font-size: 44px
+    padding: 0 10px
+    display: none
+    cursor: pointer
+    z-index: 2

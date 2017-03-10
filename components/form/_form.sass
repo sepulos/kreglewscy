@@ -1,0 +1,64 @@
+.form
+  background-image: url("../components/form/src/background.jpg")
+  +bg-img
+  padding: 50px 0 50px 0
+  text-align: center
+  color: white
+
+  &__black
+    background: $black
+    padding: 30px 0 50px
+
+  &__title
+    font-size: 42px
+    font-weight: 700
+    display: inline-block
+    padding-top: 30px
+
+  &__bold
+    font-size: 22px
+    font-style: italic
+    font-weight: 700
+    display: inline-block
+    padding-bottom: 30px
+
+  &__text
+    font-size: 22px
+    display: inline-block
+
+  &__box
+    padding-top: 40px
+    width: 100%
+    +clearfix
+
+  &__item
+    width: 25%
+    float: left
+    &.-full
+      width: 100%
+      padding-top: 30px
+      text-align: right
+
+  &__name
+    text-align: left
+    text-indent: 30px
+
+  &__send
+    padding: 10px 30px 10px 0
+
+  &__input
+    width: 100%
+    padding: 15px 5px
+    background: $blue
+    color: white
+    border: 1px solid #232223
+    &.-full
+      width: 100%
+      height: 80px
+
+  &__btn
+    background: #deba8b
+    padding: 10px 20px
+    margin: 10px 50px 0 0
+    font-size: 18px
+    display: inline-block

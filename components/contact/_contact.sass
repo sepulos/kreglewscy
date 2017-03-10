@@ -1,0 +1,73 @@
+.contact
+  background: black
+  text-align: center
+  color: white
+  +clearfix
+
+  &__title
+    font-size: 48px
+    padding-top: 30px
+
+  &__text
+    font-size: 24px
+
+  &__box
+    padding: 60px 0
+    +clearfix
+
+  &__info
+    text-align: left
+    width: 25%
+    float: left
+    +clearfix
+
+  &__code
+    +clearfix
+    width: 25%
+    float: left
+    text-align: center
+
+  &__qr
+    display: inline-block
+    width: 120px
+
+  &__infoText
+    &:nth-child(even)
+      padding-bottom: 20px
+    &.-qr
+      width: 120px
+      margin: 0 auto
+
+  &__form
+    width: 50%
+    float: left
+    text-align: right
+
+  &__item
+    float: left
+    width: 50%
+    &.-full
+      width: 100%
+
+  &__name
+    text-align: left
+    text-indent: 30px
+
+  &__send
+    padding: 10px 10px 10px 0
+
+  &__input
+    width: 100%
+    padding: 15px 0
+    background: $blue
+    border: 1px solid #232223
+    &.-full
+      width: 100%
+      height: 80px
+
+  &__btn
+    background: #deba8b
+    padding: 10px 20px
+    margin: 10px 50px 0 0
+    font-size: 18px
+    display: inline-block

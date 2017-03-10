@@ -1,0 +1,55 @@
+.family
+  padding: 80px 0 35px 0
+  background-image: url("../components/family/src/background.jpg")
+  +bg-img
+  text-align: center
+
+  &__top
+    font-size: 18px
+    font-weight: 700
+
+  &__logo
+    display: inline-block
+    width: 430px
+    height: auto
+    padding: 35px 0
+    +PHONE_ONLY_600
+      width: 300px
+    +PHONE_ONLY_480
+      width: 200px
+
+  &__italic
+    font-size: 22px
+    font-style: italic
+    padding: 0 0 45px 0
+    text-align: left
+    text-indent: 60px
+    &.-small
+      font-size: 14px
+      text-align: center
+      padding-top: 10px
+    &.-center
+      text-align: center
+      text-indent: 0
+
+  &__bold
+    font-size: 36px
+    font-weight: 700
+    padding-top: 40px
+    +PHONE_ONLY_480
+      font-size: 28px
+
+  &__box
+    display: flex
+    justify-content: center
+
+
+  &__img
+    width: 25%
+    margin: 10px
+    background: red
+    height: 150px
+    border-right: 4px solid black
+    padding-right: 10px
+    &:last-child
+      border: none
