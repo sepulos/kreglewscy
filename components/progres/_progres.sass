@@ -14,13 +14,19 @@
     display: inline-block
     width: 200px
     padding-top: 25px
+    +PHONE_ONLY_480
+      width: 150px
 
   &__title
     font-size: 24px
+    +PHONE_ONLY_480
+      font-size: 18px
 
   &__bar
     display: flex
     justify-content: space-between
+    +PHONE_ONLY
+      flex-direction: column
 
   &__box
     float: left
@@ -35,9 +41,13 @@
     padding: 40px 0
     margin: 10px 0
     +clearfix
+    +TAB_MAX
+      width: 110px
 
   &__number
     font-size: 36px
+    +TAB_MAX
+      font-size: 28px
 
   &__char
     font-size: 48px

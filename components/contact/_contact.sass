@@ -7,9 +7,21 @@
   &__title
     font-size: 48px
     padding-top: 30px
+    +PHONE_ONLY
+      font-size: 40px
+    +PHONE_ONLY_600
+      font-size: 30px
+    +PHONE_ONLY_480
+      font-size: 24px
 
   &__text
     font-size: 24px
+    +PHONE_ONLY
+      font-size: 20px
+    +PHONE_ONLY_600
+      font-size: 14px
+    +PHONE_ONLY_480
+      font-size: 12px
 
   &__box
     padding: 60px 0
@@ -20,20 +32,33 @@
     width: 25%
     float: left
     +clearfix
+    +PHONE_ONLY
+      width: 50%
+    +PHONE_ONLY_600
+      width: 100%
+      text-align: center
 
   &__code
     +clearfix
     width: 25%
     float: left
     text-align: center
+    +PHONE_ONLY
+      width: 50%
+    +PHONE_ONLY_600
+      width: 100%
 
   &__qr
     display: inline-block
     width: 120px
 
   &__infoText
+    +TAB_ONLY_880
+      font-size: 13px
+
     &:nth-child(even)
       padding-bottom: 20px
+
     &.-qr
       width: 120px
       margin: 0 auto
@@ -42,10 +67,13 @@
     width: 50%
     float: left
     text-align: right
+    +PHONE_ONLY
+      width: 100%
 
   &__item
     float: left
     width: 50%
+
     &.-full
       width: 100%
 
@@ -61,13 +89,33 @@
     padding: 15px 0
     background: $blue
     border: 1px solid #232223
+
     &.-full
       width: 100%
       height: 80px
 
   &__btn
-    background: #deba8b
+    background: $yellow
     padding: 10px 20px
     margin: 10px 50px 0 0
     font-size: 18px
     display: inline-block
+    cursor: pointer
+    border: 1 solid transparent
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0)
+    outline: 1px solid
+    outline-color: rgba(255, 255, 255, .5)
+    outline-offset: 0
+    text-shadow: none
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1)
+    +PHONE_ONLY_480
+      padding: 5px 10px
+      font-size: 14px
+      margin: 10px 10px 0 0
+
+    &:hover
+      border: 1px solid
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2)
+      outline-color: rgba(255, 255, 255, 0)
+      outline-offset: 15px
+      text-shadow: 1px 1px 2px #427388

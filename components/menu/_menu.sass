@@ -6,7 +6,9 @@
   width: 100%
   position: relative
   +PHONE_ONLY
-    height: 80px
+    height: 60px
+  +PHONE_ONLY_480
+    height: 45px
 
   &__nav
     +PHONE_ONLY
@@ -28,6 +30,7 @@
       padding: 35px 0 30px 0
     +PHONE_ONLY
       float: none
+      padding: 0 0 20px 0
       +clearfix
       display: block
 
@@ -44,8 +47,7 @@
     padding: 0 20px
     font-weight: 700
     border-right: 2px solid white
-    &:last-child
-      border: none
+    transition: color 0.5s
     +LAPTOP_MAX
       font-size: 14px
       padding: 0 10px
@@ -59,7 +61,13 @@
       text-align: center
       display: inline-block
       font-size: 16px
-      padding: 10px 0
+      padding: 5px 0
+
+    &:hover
+      color: $yellow
+
+    &:last-child
+      border: none
 
   &__logo
     position: absolute
@@ -78,6 +86,10 @@
     +TAB_MAX
       width: 130px
       height: 130px
+    +PHONE_ONLY_480
+      width: 80px
+      height: 80px
+      opacity: 0.8
 
 
   &__lang
@@ -89,7 +101,7 @@
 
   &__bars
     position: absolute
-    top: 10px
+    top: 0
     right: 0
     color: white
     font-size: 44px
@@ -97,3 +109,5 @@
     display: none
     cursor: pointer
     z-index: 2
+    +PHONE_ONLY_480
+      font-size: 34px

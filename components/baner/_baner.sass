@@ -4,7 +4,6 @@
   color: white
   margin-bottom: -10px
 
-
   &__item
     width: 100%
     height: auto
@@ -31,7 +30,6 @@
     +PHONE_ONLY_600
       width: 60px
 
-
   &__content
     position: absolute
     width: 100%
@@ -40,29 +38,42 @@
     transform: translateX(-50%)
     +clearfix
     text-align: center
+    +PHONE_ONLY_600
+      margin-top: -5px
+      position: relative
+      background-image: url("../components/baner/src/background.jpg")
+      +bg-img
+      transform: translateX(0)
+      color: black
+      padding: 20px 0
+      top: 0
+      left: 0
+
     &.-bot
-      top: 60%
+      top: 40%
+
     &.-top
       top: 30%
-
 
   &__contentTitle
     width: 100%
     font-size: 72px
     display: inline-block
     padding-bottom: 10px
-    line-height: 80px
     +LAPTOP_MAX
       font-size: 55px
-      line-height: 55px
     +PHONE_ONLY
       font-size: 35px
-      line-height: 10px
     +PHONE_ONLY_600
       font-size: 28px
+    +PHONE_ONLY_480
+      font-size: 20px
+
     &.-padding
-      padding-bottom: 60px
-      letter-spacing: 4px
+      padding-bottom: 30px
+      +PHONE_ONLY_600
+        letter-spacing: 0
+        padding-bottom: 0
 
   &__box
     padding-left: 3px
@@ -78,8 +89,6 @@
     padding: 20px
     width: 105px
     height: 7px
-    &.-flip
-      +flip
     +PHONE_ONLY
       width: 80px
       height: 5px
@@ -88,6 +97,11 @@
       padding: 10px
       width: 60px
       height: 4px
+    +PHONE_ONLY_480
+      display: none
+
+    &.-flip
+      +flip
 
   &__contentText
     font-size: 36px
@@ -95,11 +109,18 @@
       font-size: 20px
     +PHONE_ONLY_600
       font-size: 16px
+
     &.-small
-      padding-top: 350px
-      padding-bottom: 90px
       font-size: 22px
       text-align: left
+      +TAB_MAX
+        font-size: 18px
+        text-align: center
+      +PHONE_ONLY
+        font-size: 16px
+      +PHONE_ONLY_600
+        padding: 20px 0 30px 0
+        text-align: center
 
   &__btn
     padding-top: 20px

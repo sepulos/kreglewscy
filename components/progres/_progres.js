@@ -4,6 +4,7 @@ var menu = (function () {
   var $progres;
   var $box;
   var $number;
+  var $bar;
 
   //bind events
 
@@ -12,8 +13,9 @@ var menu = (function () {
     if ($progres.length > 0) {
       $box = $progres.find('.progres__box');
       $number = $progres.find('.progres__number');
+      $bar = $progres.find('.progres__bar');
 
-      bindEvents();
+      scroll();
     }
   };
 
@@ -21,10 +23,16 @@ var menu = (function () {
     init();
   });
 
-
-  var bindEvents = function () {
-    wartosci();
+  var scroll = function () {
+    var toElement = $bar.offset().top;
+    $(window).scroll(function () {
+      if (toElement < $(window).scrollTop())
+      {
+        wartosci();
+      }
+    });
   };
+
 
   var wartosci = function () {
     $number.each(function (element) {

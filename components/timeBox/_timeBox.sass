@@ -18,13 +18,24 @@
   &__content
     position: absolute
     width: 100%
-    top: 50%
+    top: 40%
     left: 50%
     transform: translateX(-50%)
     padding: 0 0 40px 0
     +clearfix
     text-align: center
     +PHONE_ONLY
+      top: 35%
+    +PHONE_ONLY_600
+      margin-top: -5px
+      position: relative
+      background-image: url("../components/timeBox/src/background.jpg")
+      +bg-img
+      transform: translateX(0)
+      color: black
+      padding: 20px 0
+      top: 0
+      left: 0
 
   &__contentTitle
     width: 100%
@@ -41,7 +52,6 @@
       font-size: 30px
     +PHONE_ONLY_480
       font-size: 20px
-      line-height: 25px
 
 
   &__box
@@ -78,14 +88,14 @@
     +PHONE_ONLY
       font-size: 22px
     +PHONE_ONLY_600
-      display: none
+      font-size: 16px
 
   &__btn
-    padding-top: 100px
+    padding-top: 10px
     +LAPTOP_MAX
-      padding-top: 50px
+      padding-top: 5px
     +PHONE_ONLY
-      padding-top: 30px
+      padding-top: 3px
     +PHONE_ONLY_600
       padding-top: 20px
 

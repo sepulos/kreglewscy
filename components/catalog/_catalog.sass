@@ -9,6 +9,8 @@
     width: 230px
     display: inline-block
     padding-bottom: 20px
+    +PHONE_ONLY_480
+      width: 150px
 
   &__text
     text-indent: 60px
@@ -16,11 +18,23 @@
     font-size: 22px
     font-style: italic
     padding-bottom: 30px
+    +PHONE_ONLY
+      font-size: 18px
+    +PHONE_ONLY_480
+      font-size: 16px
+
+    &.-pdf
+      text-indent: 0
+      text-align: center
 
   &__box
     padding-top: 30px
     width: 33%
     float: left
+    +TAB_MAX
+      width: 50%
+    +PHONE_ONLY_600
+      width: 100%
 
     &:hover
       opacity: 0.5

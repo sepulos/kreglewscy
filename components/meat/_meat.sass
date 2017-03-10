@@ -3,38 +3,45 @@
   background-image: url("../components/meat/src/background.jpg")
   +bg-img
   text-align: center
+  +clearfix
+  +PHONE_ONLY_480
+    padding: 80px 0 60px 0
+
   &.-em
     padding: 120px 0 100px 0
-    display: flex
-    justify-content: center
+    height: 200px
 
   &__top
     font-size: 48px
     padding-bottom: 40px
+    +PHONE_ONLY
+      font-size: 40px
     +PHONE_ONLY_600
       font-size: 36px
+    +PHONE_ONLY_480
+      font-size: 24px
 
   &__italic
     text-indent: 40px
     font-size: 22px
     font-style: italic
     padding: 0 0 45px 0
+    +PHONE_ONLY_480
+      font-size: 16px
+
     &.-left
       text-align: left
       font-weight: 700
       text-indent: 60px
+      +PHONE_ONLY_600
+        text-align: center
+
       &:last-child
         text-indent: 0
 
   &__box
     width: 25%
     float: left
-    &.-half
-      width: 50%
-      margin-top: -60px
-      margin-left: -5px
-      border-right: 3px solid black
-
 
   &__img
     width: 100%
@@ -48,14 +55,10 @@
     transform: rotate(-90deg) translateY(0) translateX(-80px)
     background: black
     color: white
+
     &:last-child
       background: transparent
       color: black
       transform: rotate(-90deg) translateY(50px) translateX(-30px)
-    &.-border
-      transform: none
-      font-size: 22px
-      padding: 80px 0
-    &.-small
-      font-size: 18px
+
 
