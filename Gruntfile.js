@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   var vendorScripts = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/lightgallery/dist/js/lightgallery.js',
+    'node_modules/in-view/dist/in-view.min.js',
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/jquery.waitforimages/dist/jquery.waitforimages.min.js',
     'libraries/jquery.sticky.js'

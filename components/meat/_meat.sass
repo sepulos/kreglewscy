@@ -9,7 +9,6 @@
 
   &.-em
     padding: 120px 0 100px 0
-    height: 200px
 
   &__top
     font-size: 48px
@@ -42,23 +41,55 @@
   &__box
     width: 25%
     float: left
+    +PHONE_ONLY
+      width: 100%
+      text-align: center
+
+    &.-fifty
+      width: 50%
+      +PHONE_ONLY
+       width: 100%
 
   &__img
     width: 100%
     height: auto
-    transform: translateX(-10px)
+    transform: translateY(-10px)
+    +PHONE_ONLY
+      margin: 20px auto
 
   &__text
-    padding: 5px 40px
     width: 100%
+    height: 100%
     font-size: 32px
     transform: rotate(-90deg) translateY(0) translateX(-80px)
+    +PHONE_ONLY
+      font-size: 26px
+      transform: rotate(0) translateY(0) translateX(0)
+
+  &__title
     background: black
     color: white
 
-    &:last-child
-      background: transparent
-      color: black
-      transform: rotate(-90deg) translateY(50px) translateX(-30px)
+  &__bold
+    background: transparent
+    color: black
+    font-size: 32px
+    +PHONE_ONLY
+      font-size: 26px
+      display: inline-block
+
+  &__border
+    font-size: 24px
+    border-left: 2px solid black
+    margin-left: 30px
+    padding: 50% 0
+    +PHONE_ONLY
+      font-size: 18px
+      border: none
+      padding: 0
+      display: inline-block
+
+
+
 
 

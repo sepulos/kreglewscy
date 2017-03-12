@@ -15,7 +15,7 @@ var menu = (function () {
       $number = $progres.find('.progres__number');
       $bar = $progres.find('.progres__bar');
 
-      scroll();
+      view();
     }
   };
 
@@ -23,13 +23,11 @@ var menu = (function () {
     init();
   });
 
-  var scroll = function () {
-    var toElement = $bar.offset().top;
-    $(window).scroll(function () {
-      if (toElement < $(window).scrollTop())
-      {
-        wartosci();
-      }
+  var view = function () {
+      var view = inView('.progres__bar').once('enter', function () {
+        setTimeout(function () {
+          wartosci();
+        },1000);
     });
   };
 
@@ -47,14 +45,29 @@ var menu = (function () {
     var liczba = 0;
     var number = value.data('counter');
 
-
-      for (var i=0; i<number;i++)
-      {
-        setTimeout(function () {
-          liczba++;
+    if(number<5000)
+    {
+      var id = setInterval(frame, 20);
+      function frame() {
+        if (liczba >= number) {
+          clearInterval(id);
+        } else {
+          liczba += 1;
           var nowa = value.html(liczba);
-        },3);
+        }
       }
+    } else {
+      var id = setInterval(frame, 1);
+      function frame() {
+        if (liczba >= number) {
+          clearInterval(id);
+        } else {
+          liczba += 100 ;
+          var nowa = value.html(liczba);
+        }
+      }
+    }
+
 
 
 

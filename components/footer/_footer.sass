@@ -3,6 +3,7 @@
   +bg-img
   +clearfix
   text-align: center
+  position: relative
 
   &__top
     display: flex
@@ -65,11 +66,17 @@
       border: none
       font-size: 12px
 
+    &:hover
+      text-decoration: underline
+
     &:last-child
       border: none
 
     &.-bold
       font-weight: 700
 
-    &:hover
-      text-decoration: underline
+  &__arrow
+    position: absolute
+    top: -40px
+    left: 50%
+
