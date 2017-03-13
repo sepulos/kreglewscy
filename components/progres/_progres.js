@@ -47,25 +47,25 @@ var menu = (function () {
 
     if(number<5000)
     {
-      var id = setInterval(frame, 20);
-      function frame() {
+      var id = setInterval(function () {
         if (liczba >= number) {
           clearInterval(id);
         } else {
           liczba += 1;
           var nowa = value.html(liczba);
         }
-      }
+      }, 20);
+
     } else {
-      var id = setInterval(frame, 1);
-      function frame() {
+      var id = setInterval(function () {
         if (liczba >= number) {
           clearInterval(id);
         } else {
           liczba += 100 ;
           var nowa = value.html(liczba);
         }
-      }
+      }, 1);
+
     }
 
 
