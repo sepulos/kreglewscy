@@ -1,4 +1,4 @@
-var menu = (function () {
+var foot = (function () {
 
   //catche DOM
   var $footer;

@@ -45,30 +45,23 @@ var menu = (function () {
     var liczba = 0;
     var number = value.data('counter');
 
-    if(number<5000)
-    {
       var id = setInterval(function () {
-        if (liczba >= number) {
-          clearInterval(id);
+        if (number < 5000) {
+          if (liczba >= number) {
+            clearInterval(id);
+          } else {
+            liczba += 1;
+            var nowa = value.html(liczba);
+          }
         } else {
-          liczba += 1;
-          var nowa = value.html(liczba);
-        }
-      }, 20);
-
-    } else {
-      var id = setInterval(function () {
-        if (liczba >= number) {
-          clearInterval(id);
-        } else {
-          liczba += 100 ;
-          var nowa = value.html(liczba);
+          if (liczba >= number) {
+            clearInterval(id);
+          } else {
+            liczba += 100 ;
+            var nowa = value.html(liczba);
+          }
         }
       }, 1);
-
-    }
-
-
 
 
   };

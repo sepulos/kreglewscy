@@ -14,6 +14,8 @@ var menu = (function () {
       $bars = $menu.find('.menu__bars');
 
       bindEvents();
+      scroll();
+      menuDisplay();
     }
   };
 
@@ -23,9 +25,7 @@ var menu = (function () {
 
 
   var bindEvents = function () {
-    menuDisplay();
     menuClick();
-    scroll();
   };
 
   var menuDisplay = function () {

@@ -5,17 +5,14 @@
 
     .contact__box
       .contact__info
-        .contact__infoText FIRMA KRĘGLEWSCY
-        .contact__infoText ZAKŁAD ROZBIORU MIĘSA
-        .contact__infoText PONIN, ul. Widziszewska 13A
-        .contact__infoText 64-000 Kościan
-        .contact__infoText tel. +48 65 513 29 72 Zakład w Poninie
-        .contact__infoText fax. +48 65 518 70 86
-        .contact__infoText kom. +48 604 917 215 -Tomasz Kręglewski
-        .contact__infoText kom. +48 604 917 215 -Krzysztof Kręglewski
+        .cmsContainer
+          p FIRMA KRĘGLEWSCY <br> ZAKŁAD ROZBIORU MIĘSA
+          p PONIN, ul. Widziszewska 13A <br> 64-000 Kościan
+          p tel. +48 65 513 29 72 Zakład w Poninie <br> fax. +48 65 518 70 86
+          p kom. +48 604 917 215 -Tomasz Kręglewski <br> kom. +48 604 917 215 -Krzysztof Kręglewski
 
       .contact__code
-        img.contact__qr(src="../components/contact/src/qrcode.jpg")
+        img.contact__qr(src="../components/contact/src/qrcode.png")
         .contact__infoText.-qr Przeglądasz stronę na urządzeniach mobilnych. <br> Zeskanuj kod QR
 
       .contact__form
@@ -24,12 +21,12 @@
           .contact__send
             input.contact__input
         .contact__item
-          .contact__name Imię/ Nazwisko
+          .contact__name Adres e-mail
           .contact__send
             input.contact__input
         .contact__item.-full
-          .contact__name Imię/ Nazwisko
+          .contact__name Wiadomość
           .contact__send
-            input.contact__input.-full
+            textarea.contact__input.-full
         .contact__name * wszystkie pola wymagane
         button.contact__btn(type="button") wyślij wiadomość

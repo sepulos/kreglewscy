@@ -1,4 +1,4 @@
-var gallery = (function () {
+var family = (function () {
 
   //catche DOM
   var $family;
